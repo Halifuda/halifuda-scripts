@@ -82,8 +82,8 @@ nmap <silent> pt :LspPeekTypeDefinition<CR>
 nmap <silent> gt :tab LspTypeDefinition<CR>
 
 nmap <silent> H <Plug>(lsp-hover)
-nnoremap <silent> <expr><C-down> lsp#scroll(+4)
-nnoremap <silent> <expr><C-up> lsp#scroll(-4)
+nnoremap <silent> <expr><C-j> lsp#scroll(+4)
+nnoremap <silent> <expr><C-k> lsp#scroll(-4)
 
 nmap <silent> [ <Plug>(lsp-previous-diagnostic)
 nmap <silent> ] <Plug>(lsp-next-diagnostic)
@@ -96,7 +96,7 @@ lsp#register_server({
 lsp#register_server({
             \ 'name': 'clangd',
             \ 'cmd': ['clangd'],
-            \ 'allowlist': ['c', 'cc', 'cpp']
+            \ 'allowlist': ['C', 'c', 'cc', 'cpp']
            \ })
 lsp#register_server({
             \ 'name': 'pylsp',
