@@ -7,7 +7,8 @@ plug#begin("$HOME\\vimfiles")
 Plug 'preservim/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'prabirshrestha/vim-lsp'
-Plug 'arcticicestuidio/nord-vim'
+Plug 'Halifuda/nord-vim'
+Plug 'itchyny/lightline.vim'
 
 # List ends here. Plugins become visible to Vim after this call.
 plug#end()
@@ -39,6 +40,10 @@ noremap <silent> tt :tabprevious<CR>
 noremap <silent> TT :tabnext<CR>
 # switch to NORMAL mode in terminal
 tnoremap <C-Q> <C-\><C-n>
+
+# lightline
+set laststatus=2
+set noshowmode
 
 # NERDTree
 noremap <silent> <C-n> :tab NERDTreeToggle<CR>
